@@ -14,16 +14,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,300&display=swap" rel="stylesheet">
 	 
-	  
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
     <!-- CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <style>
             body {
                 font-family: 'Montserrat', sans-serif;
+                padding-top: 60px;
+            }
+            header {
+                background-color: #ff8f04;
+                padding: 10px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 999;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            header .mobile-menu-btn {
+                width: 25px;
+            }
+
+            header .mobile-menu-btn span {
+                display: block;
+                background-color: #ffffff;
+                height: 3px;
+                margin-bottom: 4px;
+            }
+            header .mobile-menu-btn span:last-child {
+                margin: 0;
+            }
+            header .logo img {
+                height: 40px;
+            }
+            header .header-right-area a {
+                color: #ffffff;
+                padding: 5px;
+                font-size: 16px;
+            }
+
+            .search-wrapper {
+                background-color: #ff8f04;
+                padding: 10px;
+            }
+
+            .search-wrapper input {
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                border-radius: 4px;
+                border: 0;
+                padding: 5px 10px;
             }
             .products-section {
               background-color: #ffffff;
-              padding: 50px 0;
+              padding: 10px 0;
             }
             .product-holder {
                 border: 0;
@@ -50,6 +101,7 @@
             .product-holder .other-detail-wrapper {
                 width: 60%;
                 padding-left: 30px;
+                text-align: center;
             }
 
             .productpart .column {
@@ -183,6 +235,24 @@
     <input type="hidden" id="queryid" value="0"/>
 	
     <!--header starts -->
+    <header>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="" class="logo">
+            <img src="img/logo.png" alt="">
+        </a>
+        <div class="header-right-area">
+            <a href=""><i class="fas fa-user"></i></a>
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <div class="search-wrapper">
+        <input type="text" placeholder="Search...">
+    </div>
 		
         <section class="products-section">		
 					
@@ -209,26 +279,24 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="other-detail-wrapper"> 
-                                    
-                                        <div id="178">
-                                            <div class="quantity-wrapper">
-                                                <div class="quantity-input-group">
-                                                    <span class="minus-quantity">-</span>
-                                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                    <span class="add-quantity">+</span>
-                                                </div> 
-                                            </div>
-                                            <select class="form-control kgprice">
-                                                <option value="">Select</option>
-                                                <option price="10.00" desc="" value="1">500 grams</option>
-                                                <option selected="" price="20.00" desc="" value="2">1 kg</option>
-                                            </select>
-                                            <a id="178" class="btn btn-primary cartadd">
-                                                Add to Cart
-                                            </a>
+                                    <div id="178" class="other-detail-wrapper">
+                                        <div class="quantity-wrapper">
+                                            <div class="quantity-input-group">
+                                                <span class="minus-quantity">-</span>
+                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                                <span class="add-quantity">+</span>
+                                            </div> 
                                         </div>
+                                        <select class="form-control kgprice">
+                                            <option value="">Select</option>
+                                            <option price="10.00" desc="" value="1">500 grams</option>
+                                            <option selected="" price="20.00" desc="" value="2">1 kg</option>
+                                        </select>
+                                        <a id="178" class="btn btn-primary cartadd">
+                                            Add to Cart
+                                        </a>
                                     </div>
+                                    
 
                                     
                                 </div>
@@ -249,28 +317,25 @@
                                             </a>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    <div class="other-detail-wrapper"> 
                                 
-                                        <div id="178">
-                                            <div class="quantity-wrapper">
-                                                <div class="quantity-input-group">
-                                                    <span class="minus-quantity">-</span>
-                                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                    <span class="add-quantity">+</span>
-                                                </div> 
-                                            </div>
-                                            <select class="form-control kgprice">
-                                                <option value="">Select</option>
-                                                <option price="10.00" desc="" value="1">500 grams</option>
-                                                <option selected="" price="20.00" desc="" value="2">1 kg</option>
-                                            </select>
-                                            <a id="178" class="btn btn-primary cartadd">
-                                                Add to Cart
-                                            </a>
+                                    <div id="178" class="other-detail-wrapper">
+                                        <div class="quantity-wrapper">
+                                            <div class="quantity-input-group">
+                                                <span class="minus-quantity">-</span>
+                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                                <span class="add-quantity">+</span>
+                                            </div> 
                                         </div>
+                                        <select class="form-control kgprice">
+                                            <option value="">Select</option>
+                                            <option price="10.00" desc="" value="1">500 grams</option>
+                                            <option selected="" price="20.00" desc="" value="2">1 kg</option>
+                                        </select>
+                                        <a id="178" class="btn btn-primary cartadd">
+                                            Add to Cart
+                                        </a>
                                     </div>
+                                    
                                     
                                     
                                 </div>
@@ -292,27 +357,25 @@
                                         </div>
                                         
                                     </div>
-
-                                    <div class="other-detail-wrapper">
                                 
-                                        <div id="178">
-                                            <div class="quantity-wrapper">
-                                                <div class="quantity-input-group">
-                                                    <span class="minus-quantity">-</span>
-                                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                    <span class="add-quantity">+</span>
-                                                </div> 
-                                            </div>
-                                            <select class="form-control kgprice">
-                                                <option value="">Select</option>
-                                                <option selected price="10.00" desc="" value="1">500 grams</option>
-                                                <option price="20.00" desc="" value="2">1 kg</option>
-                                            </select>
-                                            <a id="178" class="btn btn-primary cartadd">
-                                                Add to Cart
-                                            </a>
+                                    <div id="178" class="other-detail-wrapper">
+                                        <div class="quantity-wrapper">
+                                            <div class="quantity-input-group">
+                                                <span class="minus-quantity">-</span>
+                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                                <span class="add-quantity">+</span>
+                                            </div> 
                                         </div>
+                                        <select class="form-control kgprice">
+                                            <option value="">Select</option>
+                                            <option selected price="10.00" desc="" value="1">500 grams</option>
+                                            <option price="20.00" desc="" value="2">1 kg</option>
+                                        </select>
+                                        <a id="178" class="btn btn-primary cartadd">
+                                            Add to Cart
+                                        </a>
                                     </div>
+                                    
                                     
                                     
                                 </div>
@@ -333,28 +396,24 @@
                                             </a>
                                         </div>
                                     </div>
-                                    
-                                    
-                                    <div class="other-detail-wrapper">
                                         
                                 
-                                        <div id="178">
-                                            <div class="quantity-wrapper">
-                                                <div class="quantity-input-group">
-                                                    <span class="minus-quantity">-</span>
-                                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                    <span class="add-quantity">+</span>
-                                                </div> 
-                                            </div>
-                                            <select class="form-control kgprice">
-                                                <option value="">Select</option>
-                                                <option selected price="10.00" desc="" value="1">500 grams</option>
-                                                <option price="20.00" desc="" value="2">1 kg</option>
-                                            </select>
-                                            <a id="178" class="btn btn-primary cartadd">
-                                                Add to Cart
-                                            </a>
+                                    <div id="178" class="other-detail-wrapper">
+                                        <div class="quantity-wrapper">
+                                            <div class="quantity-input-group">
+                                                <span class="minus-quantity">-</span>
+                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                                <span class="add-quantity">+</span>
+                                            </div> 
                                         </div>
+                                        <select class="form-control kgprice">
+                                            <option value="">Select</option>
+                                            <option selected price="10.00" desc="" value="1">500 grams</option>
+                                            <option price="20.00" desc="" value="2">1 kg</option>
+                                        </select>
+                                        <a id="178" class="btn btn-primary cartadd">
+                                            Add to Cart
+                                        </a>
                                     </div>
                                     
                                 </div>
