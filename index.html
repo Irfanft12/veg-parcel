@@ -234,6 +234,46 @@
                 font-weight: 400;
                 color: #525252;
             }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(0 0 0 / 50%);
+                z-index: 1000;
+            }
+
+            .side-menu {
+                position: fixed;
+                width: 70%;
+                top: 0;
+                bottom: 0;
+                padding: 0px;
+                background-color: #ffffff;
+                overflow-y: auto;
+                left: 0;
+                z-index: 1001;
+                transition: .5s ease;
+                transform: translateX(-100%);
+            }
+            .side-menu.is-visible {
+                transform: translateX(0);
+            }
+            .side-menu .side-menu-header {
+                background-color: #ff8f04;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: #ffffff;
+            }
+            .side-menu .side-menu-header > .right > * {
+                margin-right: 5px;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 400;
+            }
       </style>
 </head>
 
@@ -408,7 +448,20 @@
          
          <!--/footer ends-->
 		
-        
+        <!-- Side menu -->
+         <div class="side-menu">
+           <div class="side-menu-header">
+               <div class="right">
+                <i class="far fa-user-circle"></i>
+                <span>Hello</span>
+                <a href="#!">Sign in</a>
+               </div>
+            
+            <i id="side-menu-close-btn" class="fas fa-times"></i>
+           </div>
+         </div>
+        <!--/ Side menu -->
+
         
        
         
@@ -438,6 +491,20 @@
                 });
             });
 
+            $('.mobile-menu-btn').on('click', function() {
+                $('body').append('<div class="overlay"></div>');
+                $('.side-menu').toggleClass('is-visible');
+            });
+
+            $('body').on('click', '.overlay', function() {
+                $(this).remove();
+                $('.side-menu').toggleClass('is-visible');
+            });
+
+            $('#side-menu-close-btn').on('click', function() {
+                $('.side-menu').toggleClass('is-visible');
+                $('.overlay').remove();
+            })
             
 
         </script>
