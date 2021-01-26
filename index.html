@@ -22,7 +22,7 @@
       <style>
             body {
                 font-family: 'Montserrat', sans-serif;
-                padding-top: 60px;
+                padding-top: 110px;
             }
             header {
                 background-color: #ff8f04;
@@ -62,6 +62,11 @@
             .search-wrapper {
                 background-color: #ff8f04;
                 padding: 10px;
+                position: fixed;
+                left: 0;
+                top: 60px;
+                width: 100%;
+                z-index: 999;
             }
 
             .search-wrapper input {
@@ -92,15 +97,15 @@
             }
 
             .left-main {
-                width: 40%;
+                width: 45%;
             }
             .product-holder .image-wrapper {
                 
             }
 
             .product-holder .other-detail-wrapper {
-                width: 60%;
-                padding-left: 50px;
+                width: 55%;
+                padding-left: 40px;
                 text-align: center;
             }
 
@@ -125,7 +130,7 @@
             .product-holder .product-name {
                 margin: 0;
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 16px;
             }
             .product-holder .discount-price {
                 color: #999999;
@@ -235,386 +240,179 @@
 <body>
     <input type="hidden" id="queryid" value="0"/>
 	
-    <!--header starts -->
-    <header>
-        <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <a href="" class="logo">
+        <!--header starts -->
+        <header>
+            <div class="mobile-menu-btn">
+               <span></span>
+               <span></span>
+               <span></span>
+            </div>
+            <a href="" class="logo">
             <img src="img/logo.png" alt="">
-        </a>
-        <div class="header-right-area">
-            <a href=""><i class="fas fa-user"></i></a>
-            <a href=""><i class="fas fa-shopping-cart"></i></a>
-        </div>
-    </header>
-
-    <div class="search-wrapper">
-        <input type="text" placeholder="Search...">
-    </div>
-		
-        <section class="products-section">		
-					
-                <div class="container">
-                    
-                    <div id="productpart" class="productpart">
-
-                        <ul style="margin:0;padding:0" class="products">	
-        
-                            <div class="col-md-3 col-sm-6 column">
-                                <div class="product-holder">
-                                    <div class="left-main">
-                                        <div class="name-price-wrapper">
-                                            <h1 class="product-name">Tomato</h1>
-                                            <span class="discount-price">₹20</span>
-                                        </div>
-                                        <div class="image-wrapper">
-                                            <a>
-                                                <div class="img-container-home">
-                                            
-                                                    <img src="img/tomato.jpg" title="Tomoto" alt="tomoto" class="img-responsive">
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="178" class="other-detail-wrapper">
-                                        <div class="quantity-wrapper">
-                                            <div class="quantity-input-group">
-                                                <span class="minus-quantity">-</span>
-                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                <span class="add-quantity">+</span>
-                                            </div> 
-                                        </div>
-                                        <select class="form-control kgprice">
-                                            <option value="">Select</option>
-                                            <option price="10.00" desc="" value="1">500 grams</option>
-                                            <option selected="" price="20.00" desc="" value="2">1 kg</option>
-                                        </select>
-                                        <a id="178" class="btn btn-primary cartadd">
-                                            Add to Cart
-                                        </a>
-                                    </div>
-                                    
-
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 column">
-                                <div class="product-holder">
-                                    <div class="left-main">
-                                        <div class="name-price-wrapper">
-                                            <h1 class="product-name">Potato</h1>
-                                            <span class="discount-price">₹10</span>
-                                        </div>
-                                        <div class="image-wrapper">
-                                            <a>
-                                                <div class="img-container-home">
-                                        
-                                                    <img src="img/potato.jpg" title="Potato" alt="Potato" class="img-responsive">
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                
-                                    <div id="178" class="other-detail-wrapper">
-                                        <div class="quantity-wrapper">
-                                            <div class="quantity-input-group">
-                                                <span class="minus-quantity">-</span>
-                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                <span class="add-quantity">+</span>
-                                            </div> 
-                                        </div>
-                                        <select class="form-control kgprice">
-                                            <option value="">Select</option>
-                                            <option price="10.00" desc="" value="1">500 grams</option>
-                                            <option selected="" price="20.00" desc="" value="2">1 kg</option>
-                                        </select>
-                                        <a id="178" class="btn btn-primary cartadd">
-                                            Add to Cart
-                                        </a>
-                                    </div>
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 column">
-                                <div class="product-holder">
-                                    <div class="left-main">
-                                        <div class="name-price-wrapper">
-                                            <h1 class="product-name">Carrot</h1>
-                                            <span class="discount-price">₹20</span>
-                                        </div>
-                                        <div class="image-wrapper">
-                                            <a>
-                                                <div class="img-container-home">
-                                        
-                                                    <img src="img/carrot.jpg" title="Carrot" alt="Carrot" class="img-responsive">
-                                                </div>
-                                            </a>
-                                        </div>
-                                        
-                                    </div>
-                                
-                                    <div id="178" class="other-detail-wrapper">
-                                        <div class="quantity-wrapper">
-                                            <div class="quantity-input-group">
-                                                <span class="minus-quantity">-</span>
-                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                <span class="add-quantity">+</span>
-                                            </div> 
-                                        </div>
-                                        <select class="form-control kgprice">
-                                            <option value="">Select</option>
-                                            <option selected price="10.00" desc="" value="1">500 grams</option>
-                                            <option price="20.00" desc="" value="2">1 kg</option>
-                                        </select>
-                                        <a id="178" class="btn btn-primary cartadd">
-                                            Add to Cart
-                                        </a>
-                                    </div>
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6 column">
-                                <div class="product-holder">
-                                    <div class="left-main">
-                                        <div class="name-price-wrapper">
-                                            <h1 class="product-name">Ladies Finger</h1>
-                                            <span class="discount-price">₹20</span>
-                                        </div>
-                                        <div class="image-wrapper">
-                                            <a>
-                                                <div class="img-container-home">
-                                        
-                                                    <img src="img/ladies-finger.jpg" title="Ladies Finger" alt="Ladies Finger" class="img-responsive">
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                        
-                                
-                                    <div id="178" class="other-detail-wrapper">
-                                        <div class="quantity-wrapper">
-                                            <div class="quantity-input-group">
-                                                <span class="minus-quantity">-</span>
-                                                <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
-                                                <span class="add-quantity">+</span>
-                                            </div> 
-                                        </div>
-                                        <select class="form-control kgprice">
-                                            <option value="">Select</option>
-                                            <option selected price="10.00" desc="" value="1">500 grams</option>
-                                            <option price="20.00" desc="" value="2">1 kg</option>
-                                        </select>
-                                        <a id="178" class="btn btn-primary cartadd">
-                                            Add to Cart
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-        
-        
-                            </ul>
-                            <input type="hidden" class="lstid" value="9">   
-    
-                    </div>
-					
-					
-                </div><!--container-fluid ends-->
-				
-        </section>
-	
-        <!--footer starts-->
-        <!-- <img id="loadprogress"  src="http://preloaders.net/preloaders/287/Filling%20broken%20ring.gif"> -->
-            <div class="loadmore"> </div>
-
-<footer>
-    <div class="footer-top">
-        <div class="container">
-            <div class="col-md-2" id="footercategory">
-                            <!-- <h4>Menu</h4> -->
-                <!-- <ul> -->
-                    <!-- <li><a href="#">Home</a></li> -->
-                    <!-- <li><a href="#">about</a></li> -->
-                    <!-- <li><a href="#">products</a></li> -->
-                    <!-- <li><a href="#">features</a></li> -->
-                    <!-- <li><a href="#">contact</a></li> -->
-                <!-- </ul> -->
+            </a>
+            <div class="header-right-area">
+               <a href=""><i class="fas fa-user"></i></a>
+               <a href=""><i class="fas fa-shopping-cart"></i></a>
             </div>
-			
-            <div class="col-md-7 pay-method">
-				
-                <p class="footercategory">Fresh Vegetables and Fruits</p>
-                 <!-- <ul>  -->
-                  <!-- <li ><a href='aboutus.php'>About Us</a></li> -->
-                  <!-- <li ><a href='blog.php'>Blog</a></li> -->
-                 <!-- <li ><a href='contactus.php'>Contact Us</a></li> -->
-                  <!-- <li ><a href='privacypolicy.php'>Privacy Policy</a></li> -->
-                  <!-- <li ><a href='disclaimer.php'>Disclaimer</a></li> -->
-					
-					
-                <!-- </ul> -->
-				
-            </div>
-            <div class="col-md-3 social">
-                <h4>Social Media</h4>
-                <div class="social-container">
-                <a href="https://www.facebook.com/vegparcels/" class="facebook-btn"><i class="fa fa-facebook"></i></a>
-                <!-- <a href="https://twitter.com/brandparcel1" class="twitter-btn"><i class="fa fa-twitter"></i></a> -->
-                 <!-- <a href="https://www.instagram.com/brandparcelshop/" ><i class="fa fa-instagram"></i></a>  -->
-                <!-- <a href="#" class="ytube-btn"><i class="fa fa-youtube"></i></a> -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <div class="footer-bottom">
+         </header>
+         <div class="search-wrapper">
+            <input type="text" placeholder="Search...">
+         </div>
+         <section class="products-section">
             <div class="container">
-                <div class="col-md-6"><span class="copyright">COPYRIGHT © 2017 Brand Parcel. ALL RIGHTS RESERVED.</span></div>
-                <div class="col-md-6"><span class="design">design by <a href="http://www.lucidumtechnology.com" target="_blank">Website Designer</a></span></div>
+               <div id="productpart" class="productpart">
+                  <ul style="margin:0;padding:0" class="products">
+                     <div class="col-md-3 col-sm-6 column">
+                        <div class="product-holder">
+                           <div class="left-main">
+                              <div class="name-price-wrapper">
+                                 <h1 class="product-name">Tomato</h1>
+                                 <span class="discount-price">₹20</span>
+                              </div>
+                              <div class="image-wrapper">
+                                 <a>
+                                    <div class="img-container-home">
+                                       <img src="img/tomato.jpg" title="Tomoto" alt="tomoto" class="img-responsive">
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="178" class="other-detail-wrapper">
+                              <div class="quantity-wrapper">
+                                 <div class="quantity-input-group">
+                                    <span class="minus-quantity">-</span>
+                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                    <span class="add-quantity">+</span>
+                                 </div>
+                              </div>
+                              <select class="form-control kgprice">
+                                 <option value="">Select</option>
+                                 <option price="10.00" desc="" value="1">500 grams</option>
+                                 <option selected="" price="20.00" desc="" value="2">1 kg</option>
+                              </select>
+                              <a id="178" class="btn btn-primary cartadd">
+                              Add to Cart
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 column">
+                        <div class="product-holder">
+                           <div class="left-main">
+                              <div class="name-price-wrapper">
+                                 <h1 class="product-name">Potato</h1>
+                                 <span class="discount-price">₹10</span>
+                              </div>
+                              <div class="image-wrapper">
+                                 <a>
+                                    <div class="img-container-home">
+                                       <img src="img/potato.jpg" title="Potato" alt="Potato" class="img-responsive">
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="178" class="other-detail-wrapper">
+                              <div class="quantity-wrapper">
+                                 <div class="quantity-input-group">
+                                    <span class="minus-quantity">-</span>
+                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                    <span class="add-quantity">+</span>
+                                 </div>
+                              </div>
+                              <select class="form-control kgprice">
+                                 <option value="">Select</option>
+                                 <option price="10.00" desc="" value="1">500 grams</option>
+                                 <option selected="" price="20.00" desc="" value="2">1 kg</option>
+                              </select>
+                              <a id="178" class="btn btn-primary cartadd">
+                              Add to Cart
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 column">
+                        <div class="product-holder">
+                           <div class="left-main">
+                              <div class="name-price-wrapper">
+                                 <h1 class="product-name">Carrot</h1>
+                                 <span class="discount-price">₹20</span>
+                              </div>
+                              <div class="image-wrapper">
+                                 <a>
+                                    <div class="img-container-home">
+                                       <img src="img/carrot.jpg" title="Carrot" alt="Carrot" class="img-responsive">
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="178" class="other-detail-wrapper">
+                              <div class="quantity-wrapper">
+                                 <div class="quantity-input-group">
+                                    <span class="minus-quantity">-</span>
+                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                    <span class="add-quantity">+</span>
+                                 </div>
+                              </div>
+                              <select class="form-control kgprice">
+                                 <option value="">Select</option>
+                                 <option selected price="10.00" desc="" value="1">500 grams</option>
+                                 <option price="20.00" desc="" value="2">1 kg</option>
+                              </select>
+                              <a id="178" class="btn btn-primary cartadd">
+                              Add to Cart
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-3 col-sm-6 column">
+                        <div class="product-holder">
+                           <div class="left-main">
+                              <div class="name-price-wrapper">
+                                 <h1 class="product-name">Ladies Finger</h1>
+                                 <span class="discount-price">₹20</span>
+                              </div>
+                              <div class="image-wrapper">
+                                 <a>
+                                    <div class="img-container-home">
+                                       <img src="img/ladies-finger.jpg" title="Ladies Finger" alt="Ladies Finger" class="img-responsive">
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                           <div id="178" class="other-detail-wrapper">
+                              <div class="quantity-wrapper">
+                                 <div class="quantity-input-group">
+                                    <span class="minus-quantity">-</span>
+                                    <input type="text" readonly class="product-quantity-input" name="product_qty" value="1">
+                                    <span class="add-quantity">+</span>
+                                 </div>
+                              </div>
+                              <select class="form-control kgprice">
+                                 <option value="">Select</option>
+                                 <option selected price="10.00" desc="" value="1">500 grams</option>
+                                 <option price="20.00" desc="" value="2">1 kg</option>
+                              </select>
+                              <a id="178" class="btn btn-primary cartadd">
+                              Add to Cart
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </ul>
+                  <input type="hidden" class="lstid" value="9">   
+               </div>
             </div>
-        </div>
-</footer>		
-        <!--/footer ends-->
+            <!--container-fluid ends-->
+         </section>
+         <!--footer starts-->
+         
+         <!--/footer ends-->
 		
         
         
-        <!--Responsive view buttons-->
-       <button id="brand-btn" style="display:none;" data-toggle='modal' data-target='#myModalbrand' type="button">Brand</button>
-       <button id="category-btn" style="display:none;" data-toggle='modal' data-target='#myModalmenu' type="button">Category</button>
-       <button id="price-btn" style="display:none;" data-toggle='modal' data-target='#myModalprice' type="button">Price</button>
-       <button id="discount-btn" style="display:none;" data-toggle='modal' data-target='#myModaldiscount' type="button">Discount</button>
+       
         
         <!-- javaScript-->
-        <div class="modal fade" id="myModalmenu" tabindex="-1" role="dialog"      aria-hidden="true">
-											
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center mdheader">
-								
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        ×</button>
-									
-                                </div>
-                                <div class="modal-body mdbody">
-                                    <div class="row">
-                                        <div id="divmenu" class="col-md-12 ">
-											
-                                                    <ul class='myULL'><li class='lstfirst'><span class='carets'><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Fruits & vegetable</span><ul class='nested ulpadding'><li class='lstsecond'><span class='carets'><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Fruits</span><ul class='nested ulpadding'><li class='mmpad'><a href='products-fresh-fruits' class='acolor'  ><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Fresh Fruits</a><input value='48' type='hidden'/></li></ul></li><li class='lstsecond'><span class='carets'><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Vegetables</span><ul class='nested ulpadding'><li class='mmpad'><a href='products-fresh-vegetables' class='acolor'  ><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Fresh Vegetables</a><input value='49' type='hidden'/></li><li class='mmpad'><a href='products-leafy-vegetables' class='acolor'  ><i class='fa fa-angle-right fa-1 poi' aria-hidden='true'></i> Leafy Vegetables</a><input value='50' type='hidden'/></li></ul></li></ul></li></ul>													
-                                                </div>
-                                            </div>
-											
-                                        </div>
-										
-                                    </div>
-                                </div>
-                            </div>
-        <div class="modal fade" id="myModalbrand" tabindex="-1" role="dialog"      aria-hidden="true">
-											
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center mdheader">
-								
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        ×</button>
-									
-                                </div>
-                                <div class="modal-body mdbody">
-                                    <div class="row">
-                                        <div id="divbrand" class="col-md-12 ">
-											
-													
-													
-                                                </div>
-                                            </div>
-											
-                                        </div>
-										
-                                    </div>
-                                </div>
-                            </div>
-        <div class="modal fade" id="myModaldiscount" tabindex="-1" role="dialog"      aria-hidden="true">
-											
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center mdheader">
-								
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        ×</button>
-									
-                                </div>
-                                <div class="modal-body mdbody">
-                                    <div class="row">
-                                        <div id="divdiscount" class="col-md-12 ">
-											
-													
-													
-                                                </div>
-                                            </div>
-											
-                                        </div>
-										
-                                    </div>
-                                </div>
-                            </div>
-							
-        <div class="modal fade" id="myModalprice" tabindex="-1" role="dialog"      aria-hidden="true">
-											
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header text-center mdheader">
-								
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        ×</button>
-									
-                                </div>
-                                <div class="modal-body mdbody">
-                                    <div class="row">
-                                        <div  class="col-md-12 ">
-                                            <div class="checkbox">
-                                    <label><input type="checkbox" class="productfilter" value="1-999">
-                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                    Under ₹1,000</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" class="productfilter" value="1000-2500">
-                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                    ₹1,000 - ₹2,500</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" class="productfilter" value="2500-5000">
-                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                    ₹2,500 - ₹5,000</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" class="productfilter" value="5000-10000">
-                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                    ₹5,000 - ₹10,000</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" class="productfilter" value="10000-100000">
-                                    <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                                    Over ₹10,000</label>
-                                </div>
-													
-													
-                                                </div>
-                                            </div>
-											
-                                        </div>
-										
-                                    </div>
-                                </div>
-                            </div>
-
-        
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
